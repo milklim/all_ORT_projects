@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calcHttp", "calcHttpAndTcpIp\calcHttp.csproj", "{5D242783-7EA6-4C0F-9DF0-30836989C8D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calcTcpIp", "calcTcpIp\calcTcpIp.csproj", "{BAE3B14D-6A42-4269-94C3-4F2273FF458F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D242783-7EA6-4C0F-9DF0-30836989C8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D242783-7EA6-4C0F-9DF0-30836989C8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D242783-7EA6-4C0F-9DF0-30836989C8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D242783-7EA6-4C0F-9DF0-30836989C8D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE3B14D-6A42-4269-94C3-4F2273FF458F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE3B14D-6A42-4269-94C3-4F2273FF458F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE3B14D-6A42-4269-94C3-4F2273FF458F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE3B14D-6A42-4269-94C3-4F2273FF458F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B31C42AE-5105-4E27-B1C6-ADCF246EF5D0}
+	EndGlobalSection
+EndGlobal

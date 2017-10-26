@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>недокалькулятор</title>
+<style>
+	input[type=text]{
+		width: 100%;
+		padding: 5px 10px;
+		margin: 5px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+	input[type=button] {
+				width: 150px;
+				height: 35px;
+			}
+</style>
+</head>
+
+<body>
+	<div style="width: 40%; position: relative; left: 30%;">
+		number1:   <input type="text" id="txtNum1"/><br>
+		operation: <input type="text" id="opr"/><br>
+		number2:   <input type="text" id="txtNum2"/><br>
+		result:    <input type="text" id="res"/><br>
+		<input type="button" id="doit" value="calc" onclick="calculate()"/>
+		<input type="button" id="reset" value="clear" onclick="reset()"/>
+	</div>
+	
+
+<script>
+	var op; 
+	var num1;
+	var num2;
+
+	function calculate()
+	{
+		op  =  (opr.value === "+") ? "plus" : opr.value;
+		num1 = txtNum1.value;
+		num2 = txtNum2.value;
+
+		var params = "num1=" + num1 + "&num2=" + num2 + "&opr=" + op;
+		var rr = new XMLHttpRequest();
+		rr.open('POST', 'http://localhost:64536/Calculator.asmx/Calc', false);
+		rr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		rr.send(params);
+		//if(xmlhttp.status == 200)
+		//xmlDoc.getElementsByTagName("string")[0].childNodes[0].nodeValue
+
+		res.value =  parseResponse(rr.responseText);
+	}
+
+	function reset(){
+		txtNum1.value = "";
+		txtNum2.value = "";
+		opr.value = "";
+		res.value = "";
+	}
+
+	function parseResponse(response){
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(response,"text/xml");
+
+		return xmlDoc.getElementsByTagName("string")[0].childNodes[0].nodeValue;
+	}
+	</script>
+</body>
+</html>
